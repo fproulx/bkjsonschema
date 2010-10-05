@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"extends":{
+	"$ref":"${1:RemoteParentClassName}"
+},
+$0</string>
+	<key>name</key>
+	<string>object extends definition</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>tabTrigger</key>
+	<string>ox</string>
+	<key>uuid</key>
+	<string>39632998-675C-46FA-919F-790CBFE9D001</string>
+</dict>
+</plist>

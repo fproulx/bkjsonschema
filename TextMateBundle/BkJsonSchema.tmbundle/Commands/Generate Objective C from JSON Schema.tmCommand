@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+
+res=$(CocoaDialog fileselect --title "Select output directory" --select-directories ‑‑select‑only‑directories)
+
+if [ -n "$res" ]; then  ### if $rv has a non-zero length
+	# Do the heavylifting !
+	generatoroutput=$(~/work/code/BkCommon-2.0/scripts/jsonschema2objc.rb "$TM_FILEPATH" "$res")
+	CocoaDialog textbox --title "jsonschema2objc output" --text $generatoroutput --button1 "OK"
+fi</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>@G</string>
+	<key>name</key>
+	<string>Generate Objective C from JSON Schema</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>uuid</key>
+	<string>5F73D37C-7DA3-4DF4-9C5F-F029CCC6EE88</string>
+</dict>
+</plist>

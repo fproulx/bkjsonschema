@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"${1:RemotePropertyName}":{
+	"type":"array",
+	"mappedProperty":"${2:${1/./\l$0/}}",
+	"items":{
+		"\$ref":"${3:$1}"
+	}
+},
+$0</string>
+	<key>name</key>
+	<string>property (array of objects)</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>tabTrigger</key>
+	<string>pao</string>
+	<key>uuid</key>
+	<string>347A092E-FC2B-4FCD-AADD-63B83A6BE83E</string>
+</dict>
+</plist>

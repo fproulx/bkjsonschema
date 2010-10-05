@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"${1:RemotePropertyName}":{
+	"type":"object",
+	"mappedType":"$JSON_SCHEMA_OBJC_PREFIX${2:$1}",
+	"mappedProperty":"${1/./\l$0/}"
+},
+$0</string>
+	<key>name</key>
+	<string>property (object)</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>tabTrigger</key>
+	<string>po</string>
+	<key>uuid</key>
+	<string>C54799E8-4D90-4E38-B0ED-A75C2E322491</string>
+</dict>
+</plist>

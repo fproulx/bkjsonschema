@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>{
+	"id":"${1:RemoteClassName}",
+	"type":"object",
+	"mappedType":"$JSON_SCHEMA_OBJC_PREFIX$1",
+	"extends":{
+		"\$ref":"${2:RemoteParentClassName}"
+	},
+	"properties":{
+		$0
+	}
+}</string>
+	<key>name</key>
+	<string>object definition (subclass)</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>tabTrigger</key>
+	<string>o</string>
+	<key>uuid</key>
+	<string>69DDF030-2A1A-4C4F-9C1C-034CAC2565F5</string>
+</dict>
+</plist>

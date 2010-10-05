@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>{"${1:RemoteEnumValueName}":${2:0}}${3:,}$0</string>
+	<key>name</key>
+	<string>enum value</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>tabTrigger</key>
+	<string>v</string>
+	<key>uuid</key>
+	<string>FE0EDCBB-623D-4227-B7FB-DC15522719C0</string>
+</dict>
+</plist>

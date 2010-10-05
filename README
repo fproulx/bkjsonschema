@@ -1,0 +1,20 @@
+README
+
+jsonschema-code-generation-tools is a package containing two (2) tools that can generate parsing code for JSON object files (for now it generates Objective C code, but in the future it will generate Java parsing code based on Jackson). Both tools are based around simple extensions to the JSON Schema (RFC draft: http://tools.ietf.org/html/draft-zyp-json-schema-02) to better describe data types useful in complex parsing code. 
+
+The BkCoreData2JsonSchema Xcode project builds a command line tool that can generate a JSON schema file describing the entities (attributes and relationships) contained in a Core Data managed object model (.xcdatamodel files).
+
+jsonschema2objc is Ruby script that can generate Objective C header and implementation files (.h/.m) containing efficient parsing code taking as input an NSDictionary. The NSDictionary is most often created by converting the raw JSON object file using JSON framework parser.
+
+A TextMate bundle called BkJsonSchema which adds a handful of keyboard shortcuts that can really speed up the process of editing the JSON mapping schemas. 
+
+These tools can be used to generate code compatible with Core Data, as well as code that does not rely on Core Data in any way (simple business objects that are NSObject subclasses). The generated NSObject subclasses are NSCoding and NSCopying compliant as well.
+
+It is not uncommon to mix both uses of these tools (Core Data and non-Core Data parsers) in a same application. It is recommended to generate the output in specific directories (one for persistent entities, one for transient objects). To achieve this, you start by designing your Core Data managed object model using the Xcode graphical editor. Make sure to specify the class name by prefixing each entity name. You can optionally specify mapping for keys. That is especially useful if, for instance, the JSON file provided as input to the parser contains a "myFirstName" key and you'd like the generated business object to contain a property named "firstName" instead. The alternate key mapping can be optionally specified by adding a "remote" key to the userInfo of each attribute. Once you're done tweaking your Core Data model, run the coredata2jsonschema tool with the "--coredata" command line option.
+
+Although, coredata2jsonschema spits out the JSON schema on STDOUT, so you can conveniently pipe it into the jsonschema2objc script, it is recommended that you write the output as a separate file. From there, you can generate the parsing code to a specific directory (note that jsonschema2objc will create an "original-output" directory that is necessary for three-way merging of revisions of your schema).
+
+In the case you want to generate NSObject subclasses, we recommend you install the TextMate bundle and define your schema manually. Run the jsonschema2objc against this other JSON schema file. Again, we recommend redirecting the output to a specific directory you can manage NSObject subclasses separately from the NSManagedObject subclasses (for instance ./transient-model/ and ./persistent-model/).
+
+Enjoy !
+

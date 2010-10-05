@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"${1:RemotePropertyName}":{
+	"description":"Integer maps to enum of type $2",
+	"type":"integer",
+	"mappedType":"$JSON_SCHEMA_OBJC_PREFIX${2:$1}",
+	"mappedProperty":"${1/./\l$0/}"
+},
+$0</string>
+	<key>name</key>
+	<string>property (enum)</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>tabTrigger</key>
+	<string>pe</string>
+	<key>uuid</key>
+	<string>C4622CAB-3F09-4BEA-8A14-BD07BE97E83C</string>
+</dict>
+</plist>

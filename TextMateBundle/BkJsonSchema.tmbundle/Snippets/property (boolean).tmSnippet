@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"${1:RemotePropertyName}":{
+	"type":"boolean",
+	"mappedProperty":"${1/./\l$0/}"
+},
+$0</string>
+	<key>name</key>
+	<string>property (boolean)</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>tabTrigger</key>
+	<string>pb</string>
+	<key>uuid</key>
+	<string>9013307B-F191-4629-BB5E-D32D8B0CF014</string>
+</dict>
+</plist>

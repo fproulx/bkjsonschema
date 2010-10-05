@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>[ -f "$TM_NEW_FILE" ] ||  perl -pe 's/\$\{([^}]*)\}/$ENV{$1}/g' &lt;jsonschema.json &gt;"$TM_NEW_FILE"</string>
+	<key>extension</key>
+	<string>json</string>
+	<key>name</key>
+	<string>BkJSONSchema template</string>
+	<key>scope</key>
+	<string>source.jsonschema</string>
+	<key>uuid</key>
+	<string>68C5DF13-B886-4B0A-A928-491A839C4AF2</string>
+</dict>
+</plist>
